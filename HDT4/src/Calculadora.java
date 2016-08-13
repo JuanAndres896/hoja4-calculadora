@@ -23,7 +23,9 @@ public class Calculadora {
                 System.out.println("Calculadora abierta!");
             }
         this.pila = pila;
-        
+    }
+    public void finalize(){
+        instance_flag = false; //reinicia la bandera si ya no se usara la calculadora
     }
     public Calculadora (List lista) throws SingletonException {
         if (instance_flag){ //Aplicacion del singleton
