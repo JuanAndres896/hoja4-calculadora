@@ -9,14 +9,30 @@
 public class Calculadora {
     Stack pila;
     List lista;
+    static boolean instance_flag =false;
     /**
      * Este es el constructor, en donde se le asigna un tipo de Stack
      * @param pila Objeto tipo Stack, o sea cualquiera de sus implementaciones
      */
-    public Calculadora(Stack pila){
+    public Calculadora(Stack pila) throws SingletonException {
+        if (instance_flag){ //Aplicacion del singleton
+            throw new SingletonException("Solo se permite abrir una calculadora a la vez");
+        }
+            else{
+                instance_flag = true; //Si ya fue instanciada una calculadora, se cambia la bandera
+                System.out.println("Calculadora abierta!");
+            }
         this.pila = pila;
+        
     }
-    public Calculadora (List lista){
+    public Calculadora (List lista) throws SingletonException {
+        if (instance_flag){ //Aplicacion del singleton
+            throw new SingletonException("Solo se permite abrir una calculadora a la vez");
+        }
+            else{
+                instance_flag = true; //Si ya fue instanciada una calculadora, se cambia la bandera
+                System.out.println("Calculadora abierta!");
+            }
         this.lista = lista;
     }
     

@@ -60,8 +60,10 @@ public class main {
             }
             opn = Integer.parseInt(op); //se convierte la opcion ingresada a entero
             fabrica = new ListFactory();//se crea una nueva ListFactoy
+            
             lista = fabrica.getList(opn);//se usa la opcion ingresada como parametro para devolver el tipo de lista deseado
             Calculadora calc = new Calculadora(lista);  //se crea una instancia distinta, ahora se ingresa como parametro una lista
+            
             System.out.println("A continuacion se encuentran los resultados de las operaciones:");
             while (cadena != null){//este while permite operar varias lineas del archivo
                 /* Aqui se ingresa el metodo para vaciar la lista:
