@@ -2,22 +2,22 @@
 * Algoritmos y Estructuras de datos - Seccion 30
 * Rodrigo Barrios, carne 15009
 * Juan Andrés García, carné 15046
-* main.java
-* Esta clase utiliza un objeto tipo calculadora y permite al usuario decidir entre usar un vector o lista para implementarla.
+* ListFactory.java
+* Abstract factory que devuelve una AbstractList
 * La lista puede subdividirse entre simplemente encadenada, doblemente encadenada o circular.
 */
 public class ListFactory {
     
-    public AbstractList getList(int i){
+    public AbstractList getList(int i){ //segun el entero que se ingresa, devuelve un tipo de AbstractList
         
-        if (i==1){
+        if (i==1){  //Simplemente encadenada
             return new SinglyLinkedList();
         }
         
-        if(i==2){
+        if(i==2){   //Doblemente encadenada
             return new DoublyLinkedList();
         }
-        else{
+        else{       //Circular
             return new CircularList();
         }
     }

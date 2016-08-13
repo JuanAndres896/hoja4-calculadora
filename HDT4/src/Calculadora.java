@@ -2,7 +2,7 @@
 * Algoritmos y Estructuras de datos - Seccion 30
 * Rodrigo Barrios, carne 15009
 * Juan Andrés García, carné 15046
-* main.java
+* Calculadora.java
 * Esta clase usara el vector o la lista para realizar las operaciones post-fix
 * Tendra dos formas de ser instanciada, segun el parametro que se le ingrese.
 */
