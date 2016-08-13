@@ -18,7 +18,9 @@ public class ListFactory {
                 instance_flag = true; //Si ya fue instanciada una calculadora, se cambia la bandera
                 System.out.println("Lista creada!");
             }
-        
+    }
+    public void finalize(){
+        instance_flag = false; //reinicia la bandera si se crea una nueva lista
     }
     public AbstractList getList(int i){ //segun el entero que se ingresa, devuelve un tipo de AbstractList
         
