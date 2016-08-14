@@ -9,6 +9,7 @@
 public class Calculadora {
     Stack pila;
     List lista;
+    int numLista;
     static boolean instance_flag =false;
     /**
      * Este es el constructor, en donde se le asigna un tipo de Stack
@@ -27,7 +28,8 @@ public class Calculadora {
     public void finalize(){
         instance_flag = false; //reinicia la bandera si ya no se usara la calculadora
     }
-    public Calculadora (List lista) throws SingletonException {
+    
+    public Calculadora (List lista, int numLista) throws SingletonException {
         if (instance_flag){ //Aplicacion del singleton
             throw new SingletonException("Solo se permite abrir una calculadora a la vez");
         }
@@ -36,6 +38,7 @@ public class Calculadora {
                 System.out.println("Calculadora abierta!");
             }
         this.lista = lista;
+        this.numLista = numLista;
     }
     
     /**

@@ -26,7 +26,9 @@ public class main {
         int opn;    //conversion de op a entero
         
         ListFactory fabrica;    //fabrica que devolvera un tipo de lista
-        AbstractList<String> lista;     //lista que se usara en la calculadora
+        AbstractList lista = new AbstractList<String>();     //lista que se usara en la calculadora
+        
+        Stack pila = new StackVector<String>();     //se crea un nuevo stackVector
         
         System.out.println("Bienvenido a la calculadora. Elija el numero con la implementacion que desea usar:\n"
                 + " 1) Vector\n 2) Lista"); //instrucciones iniciales
@@ -38,7 +40,6 @@ public class main {
         }
         
         if (op.equals("1")){    //si se elije el vector, se procede a usar la calculadora con este metodo
-            Stack pila = new StackVector<String>();     //se crea un nuevo stackVector
             Calculadora calc = new Calculadora(pila);   //se crea una nueva calculadora
             System.out.println("A continuacion se encuentran los resultados de las operaciones:");
             while (cadena != null){//este while permite operar varias lineas del archivo
@@ -62,7 +63,7 @@ public class main {
             fabrica = new ListFactory();//se crea una nueva ListFactoy
             
             lista = fabrica.getList(opn);//se usa la opcion ingresada como parametro para devolver el tipo de lista deseado
-            Calculadora calc = new Calculadora(lista);  //se crea una instancia distinta, ahora se ingresa como parametro una lista
+            Calculadora calc = new Calculadora(lista,opn);  //se crea una instancia distinta, ahora se ingresa como parametro una lista y el entero que se ingreso como opcion
             
             System.out.println("A continuacion se encuentran los resultados de las operaciones:");
             while (cadena != null){//este while permite operar varias lineas del archivo
