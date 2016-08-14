@@ -1,3 +1,6 @@
+
+import java.util.Iterator;
+
 public interface List<E> 
 {
 

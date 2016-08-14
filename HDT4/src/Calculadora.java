@@ -39,7 +39,7 @@ public class Calculadora {
     }
     
     /**
-     * Este metodo usa el VECTOS para leer las instrucciones y devolver el valor resultante.
+     * Este metodo usa el VECTOR para leer las instrucciones y devolver el valor resultante.
      * @param readItem un String en donde recibe toda la cadena de caracteres que esta en archivo.txt para su identificacion como operandos u operaciones
      * @return el resultado de las operaciones dadas en el archivo.txt
      */
