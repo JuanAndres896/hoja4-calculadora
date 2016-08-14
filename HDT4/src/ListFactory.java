@@ -25,7 +25,7 @@ public class ListFactory {
     public AbstractList getList(int i){ //segun el entero que se ingresa, devuelve un tipo de AbstractList
         
         if (i==1){  //Simplemente encadenada
-            return new SinglyLinkedList()<String>;
+            return new SinglyLinkedList();
         }
         
         if(i==2){   //Doblemente encadenada

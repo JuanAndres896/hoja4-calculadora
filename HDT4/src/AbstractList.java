@@ -1,9 +1,6 @@
 
 import java.util.Iterator;
 
-
-
-
 public class AbstractList<E> implements Stack<E>, List<E>{
 
     @Override

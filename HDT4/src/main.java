@@ -26,7 +26,7 @@ public class main {
         int opn;    //conversion de op a entero
         
         ListFactory fabrica;    //fabrica que devolvera un tipo de lista
-        AbstractList lista;     //lista que se usara en la calculadora
+        AbstractList<String> lista;     //lista que se usara en la calculadora
         
         System.out.println("Bienvenido a la calculadora. Elija el numero con la implementacion que desea usar:\n"
                 + " 1) Vector\n 2) Lista"); //instrucciones iniciales

@@ -46,11 +46,11 @@ public E removeLast()
 // post: removes value from tail of list
 {
    DoublyLinkedNode<E> temp = tail;
-   tail = tail.previous();
+   tail = tail.previousElement;
    if (tail == null) {
        head = null;
    } else {
-       tail.setNext(null);
+       tail.next();
    }
    count--;
    return temp.value();
