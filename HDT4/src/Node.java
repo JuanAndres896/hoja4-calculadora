@@ -43,7 +43,5 @@ public void setValue(E value)
 {
 data = value;
 }
-  protected int count; // list size
-protected Node<E> head; // ref. to first element
 }
 
