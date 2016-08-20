@@ -38,6 +38,26 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
      count--;
      return temp.value();
   }
+   public E removeLast(){
+     Node<E> finger = head;
+     Node<E> temp;
+     int i =1;
+     
+     if(count!=1){
+         while (i+1<count){
+             finger = finger.next();
+             i++;
+         }
+         temp = finger.next();
+         finger.setNext(null);
+     }
+     else{
+         temp = head;
+          head = null;
+     }
+     i--;
+     return temp.value();
+ }
   
   public E getFirst()
   // pre: list is not empty
