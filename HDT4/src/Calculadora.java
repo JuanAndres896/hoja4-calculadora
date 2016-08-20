@@ -98,13 +98,48 @@ public class Calculadora {
         }
         return Integer.parseInt((String) pila.pop());
     }
-    
+    /**
+     * Este metodo usa el LINKEDLISTS para leer las instrucciones y devolver el valor resultante.
+     * @param readItem un String en donde recibe toda la cadena de caracteres que esta en archivo.txt para su identificacion como operandos u operaciones
+     * @return el resultado de las operaciones dadas en el archivo.txt
+     */
     public int calcular(String readItem){
-        int resultado = 0;
-        /*
-        Aqui pone el metodo para hacer los calculos con la lista
-        */
-        return resultado;
+        for(int i=0; i<readItem.length();i++){
+            char c = readItem.charAt(i);
+            int n = 0;
+            int m = 0;
+            int k = 0;
+            if(Character.isDigit(c)){
+                int temp = Character.getNumericValue(c);
+                lista.addLast(temp);
+            }
+            else if(c=='+'){
+                n = (Integer)lista.removeLast();
+                m = (Integer)lista.removeLast();
+                k = n+m;
+                lista.addLast(k);
+            }
+            else if(c=='-'){
+                n = (Integer)lista.removeLast();
+                m = (Integer)lista.removeLast();
+                k = n-m;
+                lista.addLast(k);
+            }
+            else if(c=='*'){
+                n = (Integer)lista.removeLast();
+                m = (Integer)lista.removeLast();
+                k = n*m;
+                lista.addLast(k);
+            }
+            else if(c=='/'){
+                n = (Integer)lista.removeLast();
+                m = (Integer)lista.removeLast();
+                k = n/m;
+                lista.addLast(k);
+            }
+            
+        }
+        return (Integer)lista.removeLast();
     }
     
 }
