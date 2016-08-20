@@ -25,6 +25,10 @@ public class Calculadora {
             }
         this.pila = pila;
     }
+
+    Calculadora() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public void finalize(){
         instance_flag = false; //reinicia la bandera si ya no se usara la calculadora
     }
