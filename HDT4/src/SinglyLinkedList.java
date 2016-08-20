@@ -52,10 +52,10 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
          finger.setNext(null);
      }
      else{
-         temp = head;
+          temp = head;
           head = null;
      }
-     i--;
+     count--;
      return temp.value();
  }
   
